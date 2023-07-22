@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!--分享--> 
+ <!--<div class="social-share"></div>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>-->
+
+ <meta charset="UTF-8">
+ <title>Beyond singularity</title>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ <meta name="renderer" content="webkit">
+ <!--<meta name="description" content="Description">-->
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- Theme: Simple Dark -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <!-- 主题 -->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css">-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">-->
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />-->
+  
+  <!-- 侧边栏logo样式 -->
+ <style>
+    .app-name-link > img{
+      width: 50%;
+    }
+ </style>
+</head>
+<body>
+  <!-- Loading dialog -->
+  <div id="app">wait loading...</div>
+
+  <div id="gitalk-container"></div>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <script>
+    window.$docsify = {
+      // 自定义封面
+      coverpage: 'cover.md',
+      // 设置了封面后，开启网站只进入封面（默认封面和首页是一页，可以向下滑动）
+      onlyCover: true,
+
+      // 主页
+      homepage: 'index.md',
+
+      // 404页面
+      // notFoundPage: '404.md',
+
+      //外链打开方式，_blank表示在新窗口打开
+      externalLinkTarget: '_blank',
+
+      // 导航栏
+      loadNavbar: 'navbar.md',
+
+      // 是否隐藏侧边栏
+      // hideSidebar: 'true',
+
+      // 自定义侧边栏
+      loadSidebar: 'sidebar.md',
+      // 侧边栏顶部标题
+      //name: '🌌', 
+      name: 'Beyond Singularity',
+      // logo和name 图标二选一
+      logo: '/media/beyondsingularity2.png',
+      // 侧边栏顶部标题或logo链接
+      nameLink: 'https://github.com/andy-brain/andy-docsify',
+      // 侧边栏目录作为内容标题
+      autoHeader: true,
+      // 自定义侧边栏最大层级
+      subMaxLevel: 6,
+
+      // 小屏自动合并导航栏和侧边栏
+      // mergeNavbar: true,
+
+      // url变化自动滚动到顶部
+      auto2top: true,
+
+      // 内容距离顶部的高度
+      topMargin: 90,
+
+      // 样式主颜色
+      // themeColor: '#3F51B5',
+
+      // 右上角github小部件链接
+      repo: 'https://github.com/andy-brain/docsifyGuide',
+
+      // 全文搜索
+      search: {
+        // （毫秒）过期时间一天
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜一下',
+        noData: '未果',
+        depth: '6'
+      },
+      // 字数统计
+      count:{
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        },
+          isExpected: true
+      },
+      // 文本高亮
+        'flexible-alerts': {
+          style: 'flat',
+          note: {
+            label: "信息"
+             },
+          tip: {
+            label: "提示"
+            },
+          warning: {
+           label: "注意"
+            },
+          attention: {
+            label: "切记"
+            }
+          },
+
+
+      // 路由映射，固定根目录的文件
+      alias: {
+        '/.*/sidebar.md': '/sidebar.md',
+        '/.*/navbar.md': '/navbar.md'
+      },
+      // edit-on-github
+      plugins: [
+        // 末尾的/是必要的
+        EditOnGithubPlugin.create('https://github.com/andy-brain/docsifyGuide/blob/master/docs/')
+      ],
+
+      // 谷歌分析
+      //ga: 'G-LTVCJ2HCC6',
+
+      sidebarDisplayLevel: 2,
+
+      // 分页导航插件
+      pagination: {
+        previousText: '上一卷',
+        nextText: '下一卷',
+        crossChapter: true,
+        crossChapterText: true
+        },
+
+     // 页脚信息插件
+      loadFooter: true,
+        loadFooter: 'footer.md'
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  <!--代码格式化-->
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+   
+  <!-- 文本高亮 -->
+   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+  <!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>-->
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!--两列布局，-- slide:break-30 --在md中插入即可-->
+  <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
+  <!-- 分页导航 -->
+  <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>-->
+  <!-- 外链脚本 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- 页脚信息 -->
+  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  
+  <!-- 评论 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'a0a12d9e735db8ad7b4a',
+      clientSecret: '7ee19084c2460f77807b911f9980f3c367ae71d6',
+      repo: 'adny-docsify',
+      owner: 'andy-brain',
+      //admin: ['andy-brain'],
+      admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      distractionFreeMode: true
+    })
+  </script>
+</body>
+</html>

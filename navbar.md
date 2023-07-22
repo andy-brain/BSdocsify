@@ -1,0 +1,4 @@
+- [:cloud:首页 :cloud:](index)
+- :zap:导航 :zap:
+  - [代码高亮](/p/guide?id=代码高亮展示)
+  - [图片展示](/p/guide?id=图片插件展示)
