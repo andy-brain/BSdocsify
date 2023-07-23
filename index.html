@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/themes/pure.css" title="pure" disabled />
   <link rel="stylesheet" href="/themes/dolphin.css" title="dolphin" disabled />-->
   
-  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />-->
   
   <!-- 侧边栏logo样式 -->
@@ -64,11 +64,11 @@
        },                                                             
       // edit-on-github,末尾的,是必要的
       plugins: [
-        EditOnGithubPlugin.create('https://github.com/andy-brain/docsifyGuide/blob/master/docs/')
+        EditOnGithubPlugin.create('https://github.com/andy-brain/BSdocsify/blob/master/docs/')
       ],
         
         
-     repo: 'https://github.com/andy-brain/docsifyGuide',   // 右上角github小部件链接
+     repo: 'https://github.com/andy-brain/BSdocsify',   // 右上角github小部件链接
      // themeColor: '#3F51B5',       // 样式主颜色
      // notFoundPage: '404.md',       // 404页面
       externalLinkTarget: '_blank',   //外链打开方式，_blank表示在新窗口打开
@@ -86,13 +86,14 @@
       // 侧边栏顶部标题
       //name: '🌌', 
       name: 'Beyond Singularity',
-      logo: '/media/beyondsingularity2.png',    // logo和name 图标二选一
-      nameLink: 'https://github.com/andy-brain/andy-docsify',  // 侧边栏顶部标题或logo链接
+      logo: '/pic/beyondsingularity2.png',    // logo和name 图标二选一
+      nameLink: 'https://github.com/andy-brain/BSdocsify',  // 侧边栏顶部标题或logo链接
       loadSidebar: 'sidebar.md',       // 自定义侧边栏
       subMaxLevel: 6,                  // 自定义侧边栏最大层级
       mergeNavbar: true,            // 小屏自动合并导航栏和侧边栏
       autoHeader: true,             // 侧边栏目录作为内容标题
       sidebarDisplayLevel: 2,
+      
       
       //插件区域//
 
@@ -139,14 +140,16 @@
       pagination: {
         previousText: '上一卷',
         nextText: '下一卷',
-        crossChapter: true,
-        crossChapterText: true
+        //crossChapter: true,
+        //crossChapterText: true
         },
       // 页脚信息插件
-      loadFooter: true,
-        loadFooter: 'footer.md'
+        loadFooter: true,
+        loadFooter: 'footer.md'  
     }
   </script>
+  <!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>-->
+ 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
@@ -160,18 +163,16 @@
   <!-- 文本高亮 -->
    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 
-  <!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>-->
-
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!--两列布局，-- slide:break-30 --在md中插入即可-->
   <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
   <!-- 分页导航 -->
-  <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>-->
+  <!--<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>-->
   <!-- 外链脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <!-- 页脚信息 -->
   <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
-  
+
   <!-- 评论 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
@@ -185,6 +186,7 @@
       owner: 'andy-brain',
       //admin: ['andy-brain'],
       admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      // facebook-like distraction free mode
       distractionFreeMode: true
     })
   </script>
