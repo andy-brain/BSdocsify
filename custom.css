@@ -1,0 +1,16 @@
+/* 固定导航栏 */
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* 可以根据需要更改背景颜色 */
+    z-index: 999; /* 确保导航栏在其他元素之上 */
+    box-shadow: 0 2px 4px rgba(98, 105, 145, 0.26); /* 可选：添加阴影效果 */
+  }
+  
+  /* 调整内容区域的位置，避免被导航栏遮挡 */
+  .app {
+    padding-top: 60px; /* 根据导航栏高度进行调整 */
+  }
+  

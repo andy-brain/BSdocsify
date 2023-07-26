@@ -26,12 +26,15 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />-->
   
+  <!-- 固定导航栏 -->
+  <link rel="stylesheet" href="custom.css">
+
   <!-- 侧边栏logo样式 -->
- <!--<style>
+ <style>
     .app-name-link > img{
-      width: 50%;
-    }
- </style>-->
+        width: 50%;
+      } 
+ </style>
  <style>
   nav.app-nav li ul {
     min-width: 100px;
@@ -42,10 +45,10 @@
     width: auto !important;
   }
  </style>
-
 </head>
-<body>
 
+<body>
+ 
   <!-- Loading dialog -->
   <div id="app">wait loading...</div>
   <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
@@ -57,7 +60,8 @@
      }
     
    window.$docsify = {
-      // 路由映射，固定根目录的文件 
+      // 路由映射，固定根目录的文件 // height: 100px;
+ //width: 150px;
       alias: {
         '/.*/sidebar.md': '/sidebar.md',
         '/.*/navbar.md': '/navbar.md'
@@ -66,7 +70,6 @@
       plugins: [
         EditOnGithubPlugin.create('https://github.com/andy-brain/BSdocsify/blob/master/docs/')
       ],
-        
         
      repo: 'https://github.com/andy-brain/BSdocsify',   // 右上角github小部件链接
      // themeColor: '#3F51B5',       // 样式主颜色
@@ -77,7 +80,7 @@
       auto2top: true,                 // url变化自动滚动到顶部
       loadNavbar: 'navbar.md',        // 导航栏
       homepage: 'index.md',
-      onlyCover: true,          // 设置了封面后，开启网站只进入封面（默认封面和首页是一页，可以向下滑动）
+      onlyCover: false,          // 设置了封面后，开启网站只进入封面（默认封面和首页是一页，可以向下滑动）
       coverpage: 'cover.md',          // 自定义封面
 
       //侧边栏//
@@ -136,16 +139,10 @@
             label: "切记"
             }
           },
-      // 分页导航插件
-      pagination: {
-        previousText: '上一卷',
-        nextText: '下一卷',
-        //crossChapter: true,
-        //crossChapterText: true
-        },
       // 页脚信息插件
         loadFooter: true,
         loadFooter: 'footer.md'  
+      
     }
   </script>
   <!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>-->
@@ -166,12 +163,14 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!--两列布局，-- slide:break-30 --在md中插入即可-->
   <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
-  <!-- 分页导航 -->
-  <!--<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>-->
+  
+  
   <!-- 外链脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <!-- 页脚信息 -->
   <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  <!-- 跳转到顶部 -->
+  <script src="//unpkg.com/@zhg-x/docsify-plugins@1.0.2/src/scroll-to-top.js"></script>
 
   <!-- 评论 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
@@ -179,7 +178,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   
   <script>
-    const gitalk = new Gitalk({
+    var gitalk = new Gitalk({
       clientID: 'a0a12d9e735db8ad7b4a',
       clientSecret: '7ee19084c2460f77807b911f9980f3c367ae71d6',
       repo: 'adny-docsify',
@@ -187,6 +186,8 @@
       //admin: ['andy-brain'],
       admin: ['Github repo collaborators, only these guys can initialize github issues'],
       // facebook-like distraction free mode
+      title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      id: location.hash.match(/#(.*?)([?]|$)/)[1],
       distractionFreeMode: true
     })
   </script>
